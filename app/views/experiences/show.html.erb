@@ -1,0 +1,44 @@
+<div class="contents-all">
+  <div class="content-detail">
+    <div class="content-user"><%= @experience.user.nickname %>さんの投稿</div>
+    <div class="title-all">  
+      <div class="title-sentence">タイトル</div>
+      <div class="content-title">
+        <%= @experience.title %>
+      </div>
+    </div>  
+    <div class="detail-all">
+      <div class="detail-sentence">投稿詳細</div>
+      <div class="content-value">
+        <%= @experience.content %>
+      </div>
+    </div>
+    <span class="badge bg-danger">
+      <%= @experience.price %>円
+    </span>
+  </div>
+
+    <% if user_signed_in? %>
+      <% if current_user == @experience.user%>
+        <div class="content-btn">
+          <div class="content-edit">
+            <%= link_to edit_experience_path(@experience) do %>
+            <button type="button" class="btn btn-outline-primary">編集</button>
+            <% end %>
+          </div>
+          <div class="content-delete">
+            <%= link_to experience_path(@experience), method: :delete do %>
+            <button type="button" class="btn btn-outline-primary">削除</button>
+            <% end %>
+          </div>
+      <% else %>
+          <div class="purchase-btn">
+            <%= link_to new_experience_message_path(@experience) do %>
+              <button type="button" class="btn btn-primary">メッセージを送る</button>
+            <% end%>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    
+</div>

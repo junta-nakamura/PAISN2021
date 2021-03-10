@@ -1,0 +1,39 @@
+詳細ページ
+
+
+<div class="main-content">
+    <div class="post-box">
+    <% @experiences.each do|experience| %>
+    <%= link_to experience_path(experience), class:"post-link" do %>
+      <div class="post">
+        <%# <div class="left-post"> %>
+        <%# アイコン画像入れたい %>
+        <%# </div> %>
+        <div class="left-post">
+          <%# <%= image_tag experience.user.image %>
+          <div class="post-user"><%= experience.user.nickname %></div>
+        </div>
+
+        <div class="right-post">
+          <div class="post-title"><%= experience.title %></div>
+          <div class="post-price"><%= experience.price %>円</div>
+        </div>  
+
+      </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+<div class="card" style="width: 100rem;">
+    <div class="card-name"><%= experience.user.nickname %></div>
+    <h5 class="card-title"><%= experience.title %></h5>
+    <p class="card-text"><%= experience.content %></p>
+
+    </div>
+  </div>
+</div>
+<% end %>

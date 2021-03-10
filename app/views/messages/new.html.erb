@@ -1,0 +1,10 @@
+<%= form_with model: @message, url: experience_messages_path, local: true do |f|%>
+<div class="message-form">
+  <div class="message-sentence">メッセージ</div>
+  <%= f.text_area :content, class:"message-content", placeholder:"お互い気持ちよくやり取りができるよう心がけましょう。" %>
+  <%# <button type="button" class="btn btn-primary">メッセージを送る</button> %>
+  <div class='new-message-btn'>
+   <%= f.submit "メッセージを送る", class:"submit-btn" %>
+  </div>
+</div>
+<% end %>

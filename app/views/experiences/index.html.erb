@@ -1,0 +1,50 @@
+<div class="main-contents">
+
+  <%# <div class="left-content">
+    <div class="chat-room"> %>
+    <%# each文 %>
+    <%# <% @experience.each do|experience| %>
+      <%# <div class="room">
+        <div class="left-room">
+          <div class="room-icon">アイコン</div>
+        </div>
+        <div class="right-room">
+          <div class="user-name">じゅんた</div>
+        </div>
+      </div> %>
+    <%# <% end %>
+    <%# each文 %>  
+    <%# </div>
+  </div> %>
+
+
+
+    
+
+
+  <% @experiences.each do|experience| %>
+  <div class="card-body">
+    
+    <div class="left-body">
+      <div class="card-user"><%= experience.user.nickname %></div>
+    </div>
+    
+    <div class="center-body">
+      <div class="card-title"><%= experience.title %></div>
+      <div class="card-content"><%= experience.content %></div>
+      <span class="badge rounded-pill bg-danger" style="font-size: 20px;">¥<%= experience.price %></span>
+
+      <div class="card-price"></div>
+    </div>
+
+    <div class="right-body">  
+      <%= link_to experience_path(experience) do %>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary me-md-2" type="button">続きを読む</button>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+<% end %>    
+

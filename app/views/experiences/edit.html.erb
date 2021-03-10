@@ -1,0 +1,14 @@
+<%= form_with model: @experience, local: true do |f| %>
+<div class="experience-form">
+  <div class="title-example">タイトル</div>
+    <%= f.text_area :title, class:"experience-title", placeholder:"例）未経験からエンジニアになる近道をお話します。", maxlength:"40" %>
+  <div class="content-example">投稿内容詳細</div>  
+    <%= f.text_area :content, class:"experience-content", placeholder:"サービスの内容、ユーザーのメリット、アピールしたい実績などを具体的に書いてください。サービス外でメールなどを使ってやり取りしたり、実際に会ったりすることを前提としたサービスはお控えください。" %>
+  <div class="price-example">料金</div>
+  ※1,000円〜999,999円
+    <%= f.text_area :price, class:"experience-price", placeholder:"¥0" %>
+  <div class='new-post-btn'>
+   <%= f.submit "確定" ,class:"new-post-btn" %>
+  </div>
+</div>  
+<% end %>
