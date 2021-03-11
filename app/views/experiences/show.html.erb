@@ -1,6 +1,8 @@
 <div class="contents-all">
   <div class="content-detail">
-    <div class="content-user"><%= @experience.user.nickname %>さんの投稿</div>
+    <%= link_to @experience.user.nickname, user_path(@experience), class:"content-user" %>
+    <div>さんの投稿</div>
+    
     <div class="title-all">  
       <div class="title-sentence">タイトル</div>
       <div class="content-title">
@@ -33,7 +35,7 @@
           </div>
       <% else %>
           <div class="purchase-btn">
-            <%= link_to new_experience_message_path(@experience) do %>
+            <%= link_to root_path do %>
               <button type="button" class="btn btn-primary">メッセージを送る</button>
             <% end%>
           </div>

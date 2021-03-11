@@ -31,7 +31,7 @@ header {
 .right-header {
   display: flex;
   justify-content: space-around;
-  width: 400px;
+  width: 600px;
 }
 
 a:hover {
@@ -42,21 +42,57 @@ a:hover {
 .post-btn {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  padding-right: 10px;
 }
 
 .signup-btn {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  padding-right: 10px;
 }
 
 .signin-btn {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  padding-right: 15px;
 }
 
 .logout-btn {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.room-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.maypage-btn{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.search-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.notice-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-right: 15px;
 }
 
 
@@ -68,7 +104,6 @@ a:hover {
   width: 90vw;
   margin: 15px auto;
   display: flex;
-  position: relative;
   border: 1px solid rgb(155, 155, 155);
   border-radius: 25px;
 }
@@ -78,14 +113,14 @@ a:hover {
 }
 
 .center-body {
-  width: 70%;
+  width: 60%;
 }
 
 .right-body {
-  width: 10%;
-  position: absolute;
+  width: 20%;
   bottom: 10px;
   right: 10px;
+  position: relative;
 }
 
 .card-title {
@@ -93,17 +128,20 @@ a:hover {
   font-size: 25px;
 }
 
-.card-content {
-  overflow:hidden;
-  text-overflow:ellipsis;
-  height: 100px;
-}
-
-.badge bg-danger {
+.index {
   width: auto;
   font-weight: bold;
   font-size: 40px;
-  padding: 5px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}
+
+.next-btn {
+  position: absolute;
+  bottom: 2px;
+  left: 200px;
 }
 
 
@@ -214,6 +252,13 @@ a:hover {
 .content-user {
   font-weight: bold;
   font-size: 30px;
+  color:black;
+  text-decoration: none;
+}
+
+.content-detail a:hover {
+  color: black;
+  text-decoration:none
 }
 
 .title-sentence {
@@ -300,3 +345,34 @@ a:hover {
 }
 
 
+
+
+
+/* ルーム */
+.room-all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.side-bar {
+  width: 25vw;
+  height: 100vh;
+  border: 2px solid rgb(206, 204, 204);
+  padding: 2px;
+  overflow: auto; 
+}
+
+.rooms {
+  padding: 10px;
+}
+
+.room {
+
+}
+
+.main-chat {
+  width: 75vw;
+  height: 100vh;
+  border: 2px solid rgb(206, 204, 204);
+  padding: 2px;
+}

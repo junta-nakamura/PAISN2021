@@ -4,13 +4,21 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # has_one_attached :image
-  has_many :experiences
-  has_many :deals
-  has_many :room_users ,dependent: :destroy
-  has_many :rooms, through: :room_users
-  has_many :deals
-  has_one_attached :image
+  has_many :experiences, dependent: :destroy
+  has_many :messages, dependent: :destroy
+  has_many :entries, dependent: :destroy
+  
+  
+  
+  # has_many :rooms, through: :room_users
+  # has_many :room_user_chats
+  # has_many :rooms, through: :room_user_chats
+  
 
+
+
+  # has_many :deals
+  # has_one_attached :image
   # with_options presence: true do
   #   validates :email
   #   validates :encrypted_password   

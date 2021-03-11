@@ -1,23 +1,31 @@
-<div class="rooms">
-  <div class="room-left">
-    <div class="room">
+<div class="room-all">
+
+  <div class="side-bar">
+    <div class="rooms">
     <% @rooms.each do |room| %>
-      <div class="room-name">
-      <%= room.name %>
+      <div class="room">
+        <div class="room-left">
+          <div class="room-icon">
+          </div>
+        </div>
+        <div class="room-right">
+          <div class="room-member">
+          </div>
+          <div class="room-message">
+          </div>
+        </div>
       </div>
       <% end %>
     </div>
   </div>
 
-  <div class="room-right">
-    <div class="room-content">
+  <div class="main-chat">
+    <%# <div class="chat-content">
     </div>
+    <div class="form-content">
+    </div> %>
   </div>
 
-  <div class="room-form">
-    <div class="message-box">
-    </div>
-    <div class="submit-btn">
-    </div>
-  </div>
 </div>
+
+

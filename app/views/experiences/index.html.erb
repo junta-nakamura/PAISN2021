@@ -31,16 +31,18 @@
     
     <div class="center-body">
       <div class="card-title"><%= experience.title %></div>
-      <div class="card-content"><%= experience.content %></div>
-      <span class="badge rounded-pill bg-danger" style="font-size: 20px;">¥<%= experience.price %></span>
-
-      <div class="card-price"></div>
+      <span class="d-inline-block text-truncate" style="max-width: 900px;">
+        <%= experience.content %>
+      </span>
     </div>
 
     <div class="right-body">  
+      <div class="index badge rounded-pill bg-danger" style="font-size: 20px;">
+        ¥<%= experience.price %>
+      </div>
       <%= link_to experience_path(experience) do %>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-primary me-md-2" type="button">続きを読む</button>
+          <button class="next-btn btn btn-primary me-md-2" type="button">続きを読む</button>
         </div>
       <% end %>
     </div>
