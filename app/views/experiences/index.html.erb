@@ -40,10 +40,8 @@
       <div class="index badge rounded-pill bg-danger" style="font-size: 20px;">
         ¥<%= experience.price %>
       </div>
-      <%= link_to experience_path(experience) do %>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="next-btn btn btn-primary me-md-2" type="button">続きを読む</button>
-        </div>
+      <%= link_to experience_path(experience), class:"next-btn" do %>
+      <span class="link-primary">続きを読む</span>
       <% end %>
     </div>
 

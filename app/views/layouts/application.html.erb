@@ -21,12 +21,12 @@
         <%= link_to "PAISN", root_path, class:"header-logo" %>
       </div>
       <div class="right-header">
-        <div class="search-btn">探す</div>
+        <%= link_to "投稿一覧", root_path, class: "search-btn" %>
         <div class="notice-btn">通知</div>
         <% if user_signed_in? %>
           <%= link_to "新規投稿", new_experience_path, class: "post-btn" %>
           <%= link_to "チャット", rooms_path, class: "room-btn" %>
-          <div class="maypage-btn"><%= current_user.nickname %></div>
+          <%= link_to current_user.nickname, user_path(current_user.id), class:"maypage-btn" %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn" %>
         <% else %>
           <%= link_to "ログイン", user_session_path, method: :post, class: "signin-btn" %>
